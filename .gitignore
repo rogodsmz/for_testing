@@ -10,3 +10,4 @@
 .nextflow/
 results/
 work/
+demo_3.nf
