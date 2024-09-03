@@ -53,7 +53,7 @@ process Replace {
 
 process RevComp {
 
-    container "pegi3s/seqkit:latestseqkit"
+    container "file:///$baseDir/dependencies/seqkit.sif"
     publishDir params.results+params.replace_seq_dir, mode: "symlink"
 
     input:

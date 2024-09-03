@@ -1,0 +1,103 @@
+Sep-02 18:49:16.834 [main] DEBUG nextflow.cli.Launcher - $> nextflow run demo_3.nf
+Sep-02 18:49:16.902 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Sep-02 18:49:16.917 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/rogo/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Sep-02 18:49:16.926 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-02 18:49:16.926 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-02 18:49:16.929 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Sep-02 18:49:16.939 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-02 18:49:16.954 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/rogo/Projects/WMS_NF_intro/demo_3/nextflow.config
+Sep-02 18:49:16.956 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/rogo/Projects/WMS_NF_intro/demo_3/nextflow.config
+Sep-02 18:49:16.975 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/rogo/.nextflow/secrets/store.json
+Sep-02 18:49:16.978 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@22101c80] - activable => nextflow.secret.LocalSecretsProvider@22101c80
+Sep-02 18:49:17.005 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-02 18:49:17.338 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Sep-02 18:49:17.350 [main] DEBUG nextflow.cli.CmdRun - Launching `demo_3.nf` [confident_lagrange] DSL2 - revision: b538211a4f
+Sep-02 18:49:17.352 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-02 18:49:17.352 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-02 18:49:17.390 [main] DEBUG nextflow.Session - Session UUID: 2fd80ea4-a618-468a-b386-c28a2a131976
+Sep-02 18:49:17.391 [main] DEBUG nextflow.Session - Run name: confident_lagrange
+Sep-02 18:49:17.391 [main] DEBUG nextflow.Session - Executor pool size: 20
+Sep-02 18:49:17.397 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-02 18:49:17.414 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (09:05 CEST)
+  System: Linux 6.10.6-200.fc40.x86_64
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 21.0.4+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 666598@fedora [127.0.1.1]
+  CPUs: 20 - Mem: 31 GB (6.3 GB) - Swap: 8 GB (8 GB) - Virtual threads ON
+Sep-02 18:49:17.429 [main] DEBUG nextflow.Session - Work-dir: /home/rogo/Projects/WMS_NF_intro/demo_3/work [btrfs]
+Sep-02 18:49:17.430 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/rogo/Projects/WMS_NF_intro/demo_3/bin
+Sep-02 18:49:17.437 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-02 18:49:17.445 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-02 18:49:17.465 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-02 18:49:17.472 [main] DEBUG nextflow.util.CustomPoolFactory - Creating virtual thread pool
+Sep-02 18:49:17.523 [main] DEBUG nextflow.Session - Session start
+Sep-02 18:49:17.792 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-02 18:49:17.893 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-02 18:49:17.894 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-02 18:49:17.898 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-02 18:49:17.904 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=20; memory=31 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Sep-02 18:49:17.905 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-02 18:49:17.965 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-02 18:49:17.965 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-02 18:49:17.967 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [0]
+Sep-02 18:49:17.977 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Sep-02 18:49:17.977 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-02 18:49:17.978 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [0]
+Sep-02 18:49:17.980 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: Replace, Lower, Split
+Sep-02 18:49:17.981 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Sep-02 18:49:17.981 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Split
+Sep-02 18:49:17.982 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Lower
+Sep-02 18:49:17.982 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Lower
+Sep-02 18:49:17.982 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Replace
+Sep-02 18:49:17.983 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Replace
+Sep-02 18:49:17.983 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_15e1a6a37217536e: /home/rogo/Projects/WMS_NF_intro/demo_3/demo_3.nf
+Sep-02 18:49:17.983 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-02 18:49:17.983 [main] DEBUG nextflow.Session - Session await
+Sep-02 18:49:18.125 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:18.127 [Task submitter] INFO  nextflow.Session - [84/7aa2c0] Submitted process > Split
+Sep-02 18:49:18.147 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: Split; status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/84/7aa2c03e90a981c8fdaaed4bbe546d]
+Sep-02 18:49:18.193 [Actor Thread 26] INFO  nextflow.Nextflow - Lower: seq_3.txt
+Sep-02 18:49:18.193 [Actor Thread 30] INFO  nextflow.Nextflow - Lower: seq_4.txt
+Sep-02 18:49:18.193 [Actor Thread 22] INFO  nextflow.Nextflow - Lower: seq_2.txt
+Sep-02 18:49:18.193 [Actor Thread 18] INFO  nextflow.Nextflow - Lower: seq_1.txt
+Sep-02 18:49:18.195 [Actor Thread 22] INFO  nextflow.script.BaseScript - Lower: seq_2.txt
+Sep-02 18:49:18.195 [Actor Thread 18] INFO  nextflow.script.BaseScript - Lower: seq_1.txt
+Sep-02 18:49:18.195 [Actor Thread 30] INFO  nextflow.script.BaseScript - Lower: seq_4.txt
+Sep-02 18:49:18.195 [Actor Thread 26] INFO  nextflow.script.BaseScript - Lower: seq_3.txt
+Sep-02 18:49:18.209 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:18.210 [Task submitter] INFO  nextflow.Session - [29/f15a6c] Submitted process > Lower (4)
+Sep-02 18:49:18.214 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:18.215 [Task submitter] INFO  nextflow.Session - [73/0e532d] Submitted process > Lower (3)
+Sep-02 18:49:18.220 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:18.220 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: Lower (4); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/29/f15a6c93333b35f3b05f36192b8e4f]
+Sep-02 18:49:18.221 [Task submitter] INFO  nextflow.Session - [d0/502050] Submitted process > Lower (2)
+Sep-02 18:49:18.226 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: Lower (3); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/73/0e532dcc3954491586e1544a35c162]
+Sep-02 18:49:18.229 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:18.230 [Task submitter] INFO  nextflow.Session - [cd/a77345] Submitted process > Lower (1)
+Sep-02 18:49:18.232 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: Lower (2); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/d0/502050d039b598ab059d32df7b7111]
+Sep-02 18:49:18.232 [Actor Thread 34] INFO  nextflow.conda.CondaCache - Creating env using conda: /home/rogo/Projects/WMS_NF_intro/demo_3/dependencies/sd_env.yml [cache /home/rogo/Projects/WMS_NF_intro/demo_3/work/conda/sd_env-028627ce5c859f0cc8bc2d0c18336653]
+Sep-02 18:49:18.241 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: Lower (1); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/cd/a77345deada585505d21366c235145]
+Sep-02 18:49:28.350 [Actor Thread 34] DEBUG nextflow.conda.CondaCache - 'conda' create complete env=/home/rogo/Projects/WMS_NF_intro/demo_3/dependencies/sd_env.yml path=/home/rogo/Projects/WMS_NF_intro/demo_3/work/conda/sd_env-028627ce5c859f0cc8bc2d0c18336653
+Sep-02 18:49:28.356 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:28.357 [Task submitter] INFO  nextflow.Session - [b5/7d3b74] Submitted process > Replace (2)
+Sep-02 18:49:28.363 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:28.363 [Task submitter] INFO  nextflow.Session - [71/9255d9] Submitted process > Replace (4)
+Sep-02 18:49:28.366 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:28.366 [Task submitter] INFO  nextflow.Session - [8b/064c8a] Submitted process > Replace (3)
+Sep-02 18:49:28.369 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-02 18:49:28.370 [Task submitter] INFO  nextflow.Session - [95/86293e] Submitted process > Replace (1)
+Sep-02 18:49:28.857 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: Replace (2); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/b5/7d3b742358491d3309b4142bb61ada]
+Sep-02 18:49:28.873 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: Replace (1); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/95/86293e4627badc0be532902944e021]
+Sep-02 18:49:28.881 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: Replace (3); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/8b/064c8ab664b0234408f7781c97f5c5]
+Sep-02 18:49:28.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: Replace (4); status: COMPLETED; exit: 0; error: -; workDir: /home/rogo/Projects/WMS_NF_intro/demo_3/work/71/9255d9b8a083817d3649aeb94a6b3c]
+Sep-02 18:49:28.886 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-02 18:49:28.984 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-02 18:49:28.985 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-02 18:49:28.989 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Sep-02 18:49:28.999 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=9; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=2s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=4; peakCpus=4; peakMemory=0; ]
+Sep-02 18:49:29.185 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-02 18:49:29.193 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Sep-02 18:49:29.193 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
