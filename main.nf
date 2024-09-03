@@ -51,6 +51,24 @@ process Replace {
     """ 
 }
 
+process RevComp {
+
+    container "pegi3s/seqkit:latestseqkit"
+    publishDir params.results+params.replace_seq_dir, mode: "symlink"
+
+    input:
+    each path(seq)
+
+    output:
+    path "${seq.baseName}_revcomp.fasta"
+
+    script:
+    """
+    seqkit seq -r -p -t DNA -v $seq > ${seq.baseName}_revcomp.fasta
+    """
+}
+
+
 log.info """\
 =============================================================
 NEXTFLOW DEMO RUN
@@ -63,5 +81,5 @@ input data              $params.in_file
 workflow{
     Split(params.in_file)
     Lower(Split.out)
-    Replace(Split.out)
+    RevComp(Split.out)
 }
