@@ -36,7 +36,7 @@ process Lower {
 
 process Replace {
     
-    conda '/home/rogo/Projects/WMS_NF_intro/demo_3/dependencies/sd_env.yml'
+    conda "$baseDir/dependencies/sd_env.yml"
     publishDir params.results+params.replace_seq_dir, mode: "symlink"
     
     input:
