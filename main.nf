@@ -42,9 +42,6 @@ process Replace {
     input:
     each path(seq)
 
-    output:
-    path seq
-
     script:
     """
     sd 'sequence' 'species' $seq
