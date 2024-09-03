@@ -1,0 +1,11 @@
+name: sd_env
+channels:
+  - conda-forge
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - libgcc=14.1.0=h77fa898_1
+  - libgcc-ng=14.1.0=h69a702a_1
+  - libgomp=14.1.0=h77fa898_1
+  - sd=1.0.0=he8a937b_0
+prefix: /home/rogo/miniforge3/envs/test_env
